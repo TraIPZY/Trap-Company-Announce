@@ -12,11 +12,10 @@ Simple ESX script that allows company employees to send in-game announcements us
 - Anti-spam system: **1 announcement every 30 minutes per company**
 
 ## Usage
-```
+
 
 /ann We are open!
 
-```
 
 ## Dependencies
 - ESX
@@ -28,4 +27,4 @@ Simple ESX script that allows company employees to send in-game announcements us
 
 ## Author
 TRAPZY
-```
+
