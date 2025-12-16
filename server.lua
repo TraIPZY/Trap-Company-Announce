@@ -7,7 +7,7 @@ RegisterCommand('ann', function(source, args)
     local xPlayer = ESX.GetPlayerFromId(source)
     if not xPlayer then return end
 
-    -- Doit avoir un job
+
     if xPlayer.job.name == 'unemployed' then
         TriggerClientEvent('esx:showNotification', source,
             '❌ Tu dois être employé pour faire une annonce.')
@@ -17,7 +17,7 @@ RegisterCommand('ann', function(source, args)
     local jobName = xPlayer.job.name
     local currentTime = os.time()
 
-    -- Vérification cooldown
+
     if AnnounceCooldown[jobName] then
         local remaining = COOLDOWN_TIME - (currentTime - AnnounceCooldown[jobName])
         if remaining > 0 then
@@ -35,10 +35,10 @@ RegisterCommand('ann', function(source, args)
         return
     end
 
-    -- Enregistre le cooldown
+
     AnnounceCooldown[jobName] = currentTime
 
-    -- Envoie l’annonce
+
     TriggerClientEvent(
         'esx_annonce:showAnnounce',
         -1,
